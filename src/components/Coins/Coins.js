@@ -12,10 +12,18 @@ const Coins = () => {
       .then((data) => setCoins(data));
   }, []);
   return (
-    <div className="border-2   ">
-      {coins.map((coin) => (
-        <CoinCard key={coin.id} coin={coin} />
-      ))}
+    <div className="px-10 py-8">
+      <h3 className="text-center font-bold text-gray-700 text-3xl">
+        Available Crypto Currencies
+      </h3>
+      <p className="text-center mt-2 text-gray-500 font-semibold">
+        Total Currencies: {coins.length}
+      </p>
+      <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center">
+        {coins.map((coin) => (
+          <CoinCard key={coin.id} coin={coin} />
+        ))}
+      </div>
     </div>
   );
 };
