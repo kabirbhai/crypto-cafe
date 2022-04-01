@@ -9,6 +9,7 @@ import Footer from "./components/Footer/Footer";
 import CoinDetails from "./components/CoinDetails/CoinDetails";
 import BdAddress from "./components/Contact/BdAddress";
 import UsAddress from "./components/Contact/UsAddress";
+import NotFound from "./components/NotFound/NotFound";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
           <Route path="us-address" element={<UsAddress />} />
         </Route>
         <Route path="/about" element={<About />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </div>
