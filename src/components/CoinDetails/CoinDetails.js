@@ -15,8 +15,8 @@ const CoinDetails = () => {
 
   return (
     <div className="p-10 pt-28 h-[80vh] max-w-7xl mx-auto">
-      <div className="grid  grid-cols-1 gap-4 md:grid-cols-2 px-5 p-14 ">
-        <div>
+      <div className="grid  grid-cols-1 gap-4 md:grid-cols-2 px-5 p-14 content-center">
+        <div className="order-2 md:order-1">
           <h1 className="text-3xl">General Info:</h1>
           <h1>Name: {coin.name}</h1>
           <h1>Market Cap Rank: {coin.market_cap_rank}</h1>
@@ -31,7 +31,7 @@ const CoinDetails = () => {
             Origin: {coin.country_origin ? coin.country_origin : "Not found"}
           </h1>
         </div>
-        <div className="flex justify-center items-center md:mt-4">
+        <div className="order-1 md:order-2 flex justify-center items-center content-center">
           <img src={coin.image?.large} alt="loading" />
         </div>
       </div>
